@@ -2,7 +2,7 @@
   "name": "hetlage",
   "version": "0.1.0",
   "private": true,
-  "homepage": "johnhetlage.com",
+  "homepage": "/build",
   "basename": "/",
   "dependencies": {
     "@babel/core": "7.4.3",
