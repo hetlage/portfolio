@@ -1,0 +1,15 @@
+{
+    "portfolio": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-hetlage-portfolio-231808-authRole",
+            "UnauthRoleArn": "arn:aws:iam::752275707990:role/amplify-hetlage-portfolio-231808-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::752275707990:role/amplify-hetlage-portfolio-231808-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "amplify-hetlage-portfolio-231808-deployment",
+            "UnauthRoleName": "amplify-hetlage-portfolio-231808-unauthRole",
+            "StackName": "amplify-hetlage-portfolio-231808",
+            "StackId": "arn:aws:cloudformation:us-west-2:752275707990:stack/amplify-hetlage-portfolio-231808/c0857d70-9987-11ea-a617-0a1e344a92a6",
+            "AmplifyAppId": "d3rrtcmt469996"
+        }
+    }
+}
