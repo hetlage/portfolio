@@ -20,11 +20,8 @@ class ContactThree extends Component {
                 <h2 className="title">{this.props.contactTitle}</h2>
                 <p className="description">
                   Connect with me via phone:{" "}
-                  <a href="tel:913-354-7966">913-354-7966</a> or email:
-                  <a href="mailto:&#106;&#111;&#104;&#110;&#104;&#101;&#116;&#108;&#097;&#103;&#101;&#049;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">
-                    {" "}
-                    johnhetlage1@gmail.com
-                  </a>{" "}
+                  <a href="tel:913-354-7966">913-354-7966</a> or complete the
+                  form below.{" "}
                 </p>
               </div>
               <div className="form-wrapper">
