@@ -12,7 +12,16 @@ class PageHelmet extends Component {
           </title>
           <meta
             name="description"
-            content="Trydo – Multipurpose React Template is a multi-use React template. It is designed to go well with multi-purpose websites. Trydo React Template will create that various landing Template, Creative Agency, And Corporate Website ."
+            content="Welcome to JohnHetlage.com. This site is dedicated to provide a view into my world."
+          />
+          <meta property="og:url" content="https://www.johnhetlage.com" />
+          <meta
+            property="og:description"
+            content="Welcome to JohnHetlage.com. This site is dedicated to provide a view into my world."
+          />
+          <meta
+            property="og:image"
+            content="/assets/images/matrix-2354492_1280.jpg"
           />
         </Helmet>
       </React.Fragment>
