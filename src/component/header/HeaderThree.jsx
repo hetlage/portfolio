@@ -66,14 +66,9 @@ class HeaderThree extends Component {
     } else if (logo === "symbol-dark") {
       logoUrl = <img src="/assets/images/logo/JH.png" alt="Digital Agency" />;
     } else if (logo === "symbol-light") {
-      logoUrl = (
-        <img
-          src="/assets/images/logo/logo-symbol-light.png"
-          alt="Digital Agency"
-        />
-      );
+      logoUrl = <img src="/assets/images/logo/JH.png" alt="Digital Agency" />;
     } else {
-      logoUrl = <img src="/assets/images/logo/logo.png" alt="Digital Agency" />;
+      logoUrl = <img src="/assets/images/logo/JH.png" alt="Digital Agency" />;
     }
 
     return (
