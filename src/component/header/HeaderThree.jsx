@@ -86,6 +86,7 @@ class HeaderThree extends Component {
                   "about",
                   "skills",
                   "portfolio",
+                  "projects",
                   "blog",
                   "contact",
                 ]}
@@ -103,6 +104,9 @@ class HeaderThree extends Component {
                 </li>
                 <li>
                   <a href="#portfolio">Portfolio</a>
+                </li>
+                <li>
+                  <a href="#projects">Projects</a>
                 </li>
                 <li>
                   <a href="#blog">Blog</a>

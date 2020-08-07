@@ -1,6 +1,7 @@
 import React from "react";
 import ScrollToTop from "react-scroll-up";
 import { FiChevronUp } from "react-icons/fi";
+import { FaLinux } from "react-icons/fa";
 import Helmet from "../component/common/Helmet";
 import TextLoop from "react-text-loop";
 import HeaderThree from "../component/header/HeaderThree";
@@ -9,6 +10,7 @@ import TabTwo from "../elements/tab/TabTwo";
 import ContactThree from "../elements/contact/ContactThree";
 import Particles from "react-particles-js";
 import PortfolioList from "../elements/portfolio/PortfolioList";
+import Portfolio from "../component/HomeLayout/homeOne/Portfolio";
 import ServiceList from "../elements/service/ServiceList";
 import BlogContent from "../elements/blog/BlogContent";
 
@@ -169,6 +171,27 @@ const PortfolioLanding = () => {
 
       {/* Start Portfolio Area */}
       <div id="portfolio" className="fix">
+        <div className="portfolio-area ptb--120 bg_color--1">
+          <div className="portfolio-sacousel-inner mb--55">
+            <Portfolio />
+          </div>
+        </div>
+      </div>
+      {/* End Portfolio Area */}
+
+      {/* Start Code Area */}
+      <div id="code-block" className="fix">
+        <FaLinux />
+        <div className="code-area ptb--120 bg_color--5">
+          <pre className="bg_color--5">
+            <code className="language-javascript mb--55"></code>
+          </pre>
+        </div>
+      </div>
+      {/* End Code Area */}
+
+      {/* Start Portfolio Area */}
+      <div id="projects" className="fix">
         <div className="portfolio-area ptb--120 bg_color--1">
           <div className="portfolio-sacousel-inner">
             <div className="container">
