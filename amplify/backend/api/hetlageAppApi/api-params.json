@@ -1,0 +1,34 @@
+{
+    "paths": [
+        {
+            "name": "/news",
+            "lambdaFunction": "hetlage3b63b9d9",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "hetlageAppApi",
+    "apiName": "hetlageAppApi",
+    "functionArns": [
+        {
+            "lambdaFunction": "hetlage3b63b9d9"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-hetlage-portfolio-231941-authRole",
+        "unAuthRoleName": "amplify-hetlage-portfolio-231941-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "hetlage3b63b9d9",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

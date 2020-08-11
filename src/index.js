@@ -1,6 +1,8 @@
 // React Required
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
+import Amplify from "aws-amplify";
+import awsconfig from "./aws-exports";
 
 // Create Import File
 import "./index.scss";
@@ -13,6 +15,8 @@ import error404 from "./elements/error404";
 
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import * as serviceWorker from "./serviceWorker";
+
+Amplify.configure(awsconfig);
 
 class Root extends Component {
   render() {

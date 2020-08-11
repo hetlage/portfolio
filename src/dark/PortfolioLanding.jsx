@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ScrollToTop from "react-scroll-up";
 import { FiChevronUp } from "react-icons/fi";
 import { FaLinux } from "react-icons/fa";
@@ -12,7 +12,7 @@ import Particles from "react-particles-js";
 import PortfolioList from "../elements/portfolio/PortfolioList";
 import Portfolio from "../component/HomeLayout/homeOne/Portfolio";
 import ServiceList from "../elements/service/ServiceList";
-import BlogContent from "../elements/blog/BlogContent";
+import { API } from "aws-amplify";
 
 const SlideList = [
   {
@@ -23,17 +23,27 @@ const SlideList = [
     buttonLink: "",
   },
 ];
+
 const PortfolioLanding = () => {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    API.get("hetlageAppApi", "/news")
+      .then((res) => setPosts(res.posts))
+      //.then((res) => console.log(res))
+      .catch((err) => console.log(err));
+  }, []);
+
   let title = "About Me",
     description =
       "Based in the Kansas City Metro, I am a dynamic and motivated technical professional with proven results-driven leadership. A lifelong learner. Passionate about technology and the ethics behind it. Self taught and formally educated in various subject matters of technology. A coder, maker and entrepreneur.";
-  const PostList = BlogContent.slice(0, 3);
+
   return (
     <div className="active-dark">
       <Helmet pageTitle="John Hetlage" />
 
       <HeaderThree homeLink="/" logo="symbol-dark" color="color-black" />
-      {/* Start Slider Area   */}
+      {/* Start Slider Area */}
       <div
         id="home"
         className="fix slider-activation slider-creative-agency with-particles"
@@ -241,32 +251,46 @@ const PortfolioLanding = () => {
               </div>
             </div>
             <div className="row mt--60 mt_sm--40">
-              {PostList.map((value, i) => (
-                <div className="col-lg-4 col-md-6 col-12" key={i}>
-                  <div className="blog blog-style--1">
-                    <div className="thumbnail">
-                      <a href="/#blog">
-                        <img
-                          className="w-100"
-                          src={`/assets/images/blog/Coming-Soon.png`}
-                          alt="Blog Images"
-                        />
-                      </a>
-                    </div>
-                    <div className="content">
-                      <p className="blogtype">{value.category}</p>
-                      <h4 className="title">
-                        <a href="/#blog">{value.title}</a>
-                      </h4>
-                      <div className="blog-btn">
-                        <a className="rn-btn text-white" href="/#blog">
-                          Read More
-                        </a>
+              {posts
+                ? posts.slice(0, 6).map((post, i) => (
+                    <div className="col-lg-4 col-md-6 col-12" key={i}>
+                      <div className="blog blog-style--1">
+                        <div className="thumbnail">
+                          <a href="/#blog">
+                            <img
+                              height="390"
+                              className="w-100"
+                              src={post.urlToImage}
+                              alt="Blog Images"
+                            />
+                          </a>
+                        </div>
+                        <div className="content">
+                          <p className="blogtype">{post.source.name}</p>
+                          <h4 className="title">
+                            <a
+                              href={post.url}
+                              target="_blank"
+                              rel="noreferrer noopener"
+                            >
+                              {post.title}
+                            </a>
+                          </h4>
+                          <div className="blog-btn">
+                            <a
+                              className="rn-btn text-white"
+                              href={post.url}
+                              target="_blank"
+                              rel="noreferrer noopener"
+                            >
+                              Read More
+                            </a>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              ))}
+                  ))
+                : ""}
             </div>
           </div>
         </div>
