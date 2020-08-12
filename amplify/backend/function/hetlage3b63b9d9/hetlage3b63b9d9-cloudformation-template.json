@@ -68,7 +68,7 @@
 				"Timeout": "25",
 				"Code": {
 					"S3Bucket": "amplify-hetlage-portfolio-231941-deployment",
-					"S3Key": "amplify-builds/hetlage3b63b9d9-4f2f454e554942635145-build.zip"
+					"S3Key": "amplify-builds/hetlage3b63b9d9-377068436678576f7a6f-build.zip"
 				}
 			}
 		},

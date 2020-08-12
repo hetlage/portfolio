@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ScrollToTop from "react-scroll-up";
 import { FiChevronUp } from "react-icons/fi";
-import { FaLinux } from "react-icons/fa";
 import Helmet from "../component/common/Helmet";
 import TextLoop from "react-text-loop";
 import HeaderThree from "../component/header/HeaderThree";
@@ -13,6 +12,8 @@ import PortfolioList from "../elements/portfolio/PortfolioList";
 import Portfolio from "../component/HomeLayout/homeOne/Portfolio";
 import ServiceList from "../elements/service/ServiceList";
 import { API } from "aws-amplify";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { a11yDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 const SlideList = [
   {
@@ -33,6 +34,26 @@ const PortfolioLanding = () => {
       //.then((res) => console.log(res))
       .catch((err) => console.log(err));
   }, []);
+
+  const pythonString =
+    `# Simple Flask App\n` +
+    `import os\n` +
+    `from flask import Flask, render_template, request, redirect, url_for\n` +
+    `from flask_sqlalchemy import SQLAlchemy\n\n` +
+    `app = Flask(__name__)\n` +
+    `... Some Config Stuff\n\n` +
+    `class Todo(db.Model):\n` +
+    `    id = db.Column(db.Integer, primary_key=True)\n` +
+    `    text = db.Column(db.String(200))\n` +
+    `    complete = db.Column(db.Boolean)\n\n` +
+    `@app.route('/')\n` +
+    `def index():\n` +
+    `    incomplete = Todo.query.filter_by(complete=False).all()\n` +
+    `    complete = Todo.query.filter_by(complete=True).all()\n\n` +
+    `    return render_template('index.html', incomplete=incomplete, complete=complete)\n\n` +
+    `... Some More Routes\n\n` +
+    `if __name__ == '__main__':\n` +
+    `    app.run(debug=True)`;
 
   let title = "About Me",
     description =
@@ -89,6 +110,7 @@ const PortfolioLanding = () => {
                           <span> Programmer</span>
                           <span> Maker</span>
                           <span> Entrepreneur</span>
+                          <span> Lifelong Learner</span>
                         </TextLoop>{" "}
                       </h1>
                       <h2>based in Kansas City, MO.</h2>
@@ -122,7 +144,7 @@ const PortfolioLanding = () => {
 
       {/* Start About Area */}
       <div id="about" className="fix">
-        <div className="about-area ptb--120  bg_color--1">
+        <div className="about-area ptb--120 bg_color--1">
           <div className="about-wrapper">
             <div className="container">
               <div className="row row--35 align-items-center">
@@ -190,12 +212,17 @@ const PortfolioLanding = () => {
       {/* End Portfolio Area */}
 
       {/* Start Code Area */}
-      <div id="code-block" className="fix">
-        <FaLinux />
-        <div className="code-area ptb--120 bg_color--5">
-          <pre className="bg_color--5">
-            <code className="language-javascript mb--55"></code>
-          </pre>
+      <div id="code-block" className="fix code-block">
+        <div className="container">
+          <div className="row ptb--30">
+            <div className="col-lg-2"></div>
+            <div className="code-area bg_color--5 col-lg-8">
+              <SyntaxHighlighter language="python" style={a11yDark}>
+                {pythonString}
+              </SyntaxHighlighter>
+            </div>
+            <div className="col-lg-2"></div>
+          </div>
         </div>
       </div>
       {/* End Code Area */}
