@@ -7,7 +7,7 @@ class PageHelmet extends Component {
       <Helmet>
         {/* General tags */}
         <title>
-          {this.props.pageTitle} || Web Developer, Programmer, Maker &
+          {this.props.pageTitle} | Web Developer | Programmer | Maker &
           Entrepreneur{" "}
         </title>
       </Helmet>
