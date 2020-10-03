@@ -10,7 +10,7 @@ const SocialShare = [
     link: "https://www.linkedin.com/in/john-hetlage-8747826b",
   },
   { Social: <FaTwitter />, link: "https://twitter.com/hetlagejohn" },
-  { Social: <FaGithub />, link: "https://github.com/johnsriot" },
+  { Social: <FaGithub />, link: "https://github.com/hetlage" },
 ];
 class HeaderThree extends Component {
   constructor(props) {

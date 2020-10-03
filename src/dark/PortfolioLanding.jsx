@@ -252,7 +252,7 @@ const PortfolioLanding = () => {
                   <div className="view-more-btn mt--60 mt_sm--30 text-center">
                     <a
                       className="rn-button-style--2 btn-solid"
-                      href="https://github.com/johnsriot"
+                      href="https://github.com/hetlage"
                     >
                       <span>View More</span>
                     </a>

@@ -11,31 +11,31 @@ const PortfolioListContent = [
     image: "image-2",
     category: "React, Wordpress",
     title: "React with Wordpress Rest API demo",
-    url: "https://github.com/johnsriot/react-wordpress-demo",
+    url: "https://github.com/hetlage/react-wordpress-demo",
   },
   {
     image: "image-3",
     category: "Twilio REST, API Gateway, AWS Lambda",
     title: "Twilio text to call app with AWS services",
-    url: "https://github.com/johnsriot/twilio-text-to-call",
+    url: "https://github.com/hetlage/twilio-text-to-call",
   },
   {
     image: "image-4",
     category: "Python",
     title: "Python Long-Exposure Simulation from Video",
-    url: "https://github.com/johnsriot/long-exposure-simulation",
+    url: "https://github.com/hetlage/long-exposure-simulation",
   },
   {
     image: "image-5",
     category: "Pixabay REST API, React",
     title: "Pixabay image finder using React",
-    url: "https://github.com/johnsriot/image-finder",
+    url: "https://github.com/hetlage/image-finder",
   },
   {
     image: "image-6",
     category: "Alexa-sdk, AWS Lambda",
     title: "Corny Dad Alexa skill using sdk version 1",
-    url: "https://github.com/johnsriot/CornyDad",
+    url: "https://github.com/hetlage/CornyDad",
   },
 ];
 
