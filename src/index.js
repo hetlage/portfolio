@@ -1,6 +1,6 @@
 // React Required
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
+import { hydrate, render, ReactDOM } from "react-dom";
 import Amplify from "aws-amplify";
 import awsconfig from "./aws-exports";
 
@@ -37,5 +37,12 @@ class Root extends Component {
   }
 }
 
-ReactDOM.render(<Root />, document.getElementById("root"));
+const rootElement = document.getElementById("root");
+if (rootElement.hasChildNodes()) {
+  hydrate(<Root />, rootElement);
+} else {
+  render(<Root />, rootElement);
+}
+
+//ReactDOM.render(<Root />, document.getElementById("root"));
 serviceWorker.register();

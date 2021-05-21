@@ -36,7 +36,7 @@ Slider Default Style
 ------------------------*/
 .slide {
     .inner {
-        padding-top: 100px;
+        padding-top: 0; // 100px;
         @media #{$sm-layout} {
             padding-top: 70px;
         }
@@ -606,6 +606,15 @@ Personal Portfolio
     }
 }
 
+.slide.personal-portfolio-slider {
+    background: url(/assets/images/earth-portion.png) bottom -100px center no-repeat;
+
+    .intro {
+        background: rgba(0,0,0, .2);
+        padding: 5px;
+        border-radius: 5px;
+    }
+}
 /*-------------------------
 For Slider Service 
 ---------------------------*/
