@@ -36,7 +36,7 @@ const PortfolioLanding = () => {
   }, []);
 
   const pythonString =
-    `# Simple Flask App\n` +
+    `# Simple Flasks App\n` +
     `import os\n` +
     `from flask import Flask, render_template, request, redirect, url_for\n` +
     `from flask_sqlalchemy import SQLAlchemy\n\n` +
